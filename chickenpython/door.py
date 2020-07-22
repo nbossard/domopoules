@@ -2,6 +2,7 @@
 # coding=UTF-8
 
 from gpiozero import Motor
+from gpiozero import Button
 import datetime
 import time
 import logging
@@ -11,10 +12,16 @@ TIME_OPEN = 83
 FILENAME = "/opt/chickendoor/status.txt"
 LOGFILE = "/opt/chickendoor/chicken.log"
 motor = Motor(forward=17, backward=22)
+button = Button(2)
 
 def init():
     logging.basicConfig(filename='chicken.log', level=logging.DEBUG, format='%(asctime)s — %(name)s — %(levelname)s — %(message)s')
 
+
+def say_hello():
+    logging.info("Door button pressed")
+
+button.when_pressed = say_hello
 
 def read_status():
     file = open(FILENAME, "r")
@@ -60,12 +67,15 @@ def close_door():
         write_status("Closing")
         logging.info("DOOR Closing…")
         motor.backward()
-        time.sleep(TIME_OPEN)
+        time_spent=0
+        while not button.is_pressed and time_spent<TIME_CLOSE:
+          time.sleep(1)
+          time_spent+=1
+          logging.info ("time spent: " +str(time_spent))
         motor.stop()
         logging.info("DOOR Closed!")
         write_status("Closed")
     else:
-        gpio.cleanup()
         logging.warning("ERROR! Action CLOSE but door not opened!")
 
 
