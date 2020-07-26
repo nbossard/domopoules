@@ -7,8 +7,8 @@ import datetime
 import time
 import logging
 
-TIME_CLOSE = 100
-TIME_OPEN = 83
+TIME_CLOSE = 85
+TIME_OPEN = 65
 FILENAME = "/opt/chickendoor/status.txt"
 LOGFILE = "/opt/chickendoor/chicken.log"
 motor = Motor(forward=17, backward=22)
@@ -17,11 +17,14 @@ button = Button(2)
 def init():
     logging.basicConfig(filename='chicken.log', level=logging.DEBUG, format='%(asctime)s — %(name)s — %(levelname)s — %(message)s')
 
+def print_and_log(message): 
+    logging.info(message)
+    print message
 
-def say_hello():
-    logging.info("Door button pressed")
+def info_button_pressed():
+    print_and_log("Door button pressed")
 
-button.when_pressed = say_hello
+button.when_pressed = info_button_pressed
 
 def read_status():
     file = open(FILENAME, "r")
@@ -32,6 +35,7 @@ def read_status():
 
 def write_status(STATUS):
     file = open(FILENAME, "w")
+    print_and_log("Writing new status: " + STATUS)
     file.write(STATUS)
     file.close()
 
@@ -39,11 +43,11 @@ def write_status(STATUS):
 def open_door():
     if read_status() == "Closed":
         write_status("Opening")
-        logging.info("DOOR Opening…")
+        print_and_log("DOOR Opening…")
         motor.forward()
         time.sleep(TIME_CLOSE)
         motor.stop()
-        logging.info("DOOR Opened !")
+        print_and_log("DOOR Opened !")
         write_status("Opened")
     else:
         logging.warning("ERROR! Action OPEN but door not closed!")
@@ -54,27 +58,19 @@ def force_open_door():
 
 def force_open_door_duration(parDuration):
     write_status("Opening")
-    logging.info("DOOR FORCED Opening…")
+    print_and_log("DOOR FORCED Opening…")
     motor.forward()
     time.sleep(parDuration)
     motor.stop()
-    logging.info("DOOR FORCED Opened!")
+    print_and_log("DOOR FORCED Opened!")
     write_status("Opened")
 
 
 def close_door():
     if read_status() == "Opened":
-        write_status("Closing")
-        logging.info("DOOR Closing…")
-        motor.backward()
-        time_spent=0
-        while not button.is_pressed and time_spent<TIME_CLOSE:
-          time.sleep(1)
-          time_spent+=1
-          logging.info ("time spent: " +str(time_spent))
-        motor.stop()
-        logging.info("DOOR Closed!")
-        write_status("Closed")
+        print_and_log("DOOR Closing…")
+        close_autostop()
+        print_and_log("DOOR Closed!")
     else:
         logging.warning("ERROR! Action CLOSE but door not opened!")
 
@@ -83,10 +79,17 @@ def force_close_door():
     force_close_door_duration(TIME_CLOSE)
 
 def force_close_door_duration(parDuration):
+    print_and_log("DOOR FORCED Closing…")
+    close_autostop()
+    print_and_log("DOOR FORCED Closed!")
+
+def close_autostop()
     write_status("Closing")
-    logging.info("DOOR FORCED Closing…")
+    time_spent=0
     motor.backward()
-    time.sleep(parDuration)
+    while not button.is_pressed and time_spent<TIME_CLOSE:
+      time.sleep(1)
+      time_spent+=1
+      print_and_log ("time spent: " +str(time_spent))
     motor.stop()
-    logging.info("DOOR FORCED Closed!")
     write_status("Closed")
