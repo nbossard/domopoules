@@ -1,6 +1,6 @@
 <?php
-
+echo "Closing chicken door...";
 $command = escapeshellcmd('/opt/chickendoor/close_door.py');
-shell_exec($command);
-
+$execres = shell_exec($command);
+echo "<pre>$execres</pre>";
 ?>
