@@ -7,7 +7,7 @@ import datetime
 import time
 import logging
 
-TIME_CLOSE = 85
+TIME_CLOSE = 99
 TIME_OPEN = 65
 FILENAME = "/opt/chickendoor/status.txt"
 LOGFILE = "/opt/chickendoor/chicken.log"
