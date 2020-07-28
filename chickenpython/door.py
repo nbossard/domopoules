@@ -45,7 +45,7 @@ def open_door():
         write_status("Opening")
         print_and_log("DOOR Opening…")
         motor.forward()
-        time.sleep(TIME_CLOSE)
+        time.sleep(TIME_OPEN)
         motor.stop()
         print_and_log("DOOR Opened !")
         write_status("Opened")
@@ -69,7 +69,7 @@ def force_open_door_duration(parDuration):
 def close_door():
     if read_status() == "Opened":
         print_and_log("DOOR Closing…")
-        close_autostop()
+        close_autostop(TIME_CLOSE)
         print_and_log("DOOR Closed!")
     else:
         logging.warning("ERROR! Action CLOSE but door not opened!")
@@ -80,14 +80,14 @@ def force_close_door():
 
 def force_close_door_duration(parDuration):
     print_and_log("DOOR FORCED Closing…")
-    close_autostop()
+    close_autostop(parDuration)
     print_and_log("DOOR FORCED Closed!")
 
-def close_autostop()
+def close_autostop(parDuration):
     write_status("Closing")
     time_spent=0
     motor.backward()
-    while not button.is_pressed and time_spent<TIME_CLOSE:
+    while not button.is_pressed and time_spent<parDuration:
       time.sleep(1)
       time_spent+=1
       print_and_log ("time spent: " +str(time_spent))
