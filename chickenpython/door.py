@@ -9,8 +9,7 @@ import logging
 
 TIME_CLOSE = 99
 TIME_OPEN = 65
-FILENAME = "/opt/chickendoor/status.txt"
-LOGFILE = "/opt/chickendoor/chicken.log"
+STATUSFILENAME = "/home/pi/domopoules/chickenpython/status.txt"
 motor = Motor(forward=17, backward=22)
 button = Button(2)
 
@@ -27,14 +26,14 @@ def info_button_pressed():
 button.when_pressed = info_button_pressed
 
 def read_status():
-    file = open(FILENAME, "r")
+    file = open(STATUSFILENAME, "r")
     status = file.readline()
     file.close()
     return(status)
 
 
 def write_status(STATUS):
-    file = open(FILENAME, "w")
+    file = open(STATUSFILENAME, "w")
     print_and_log("Writing new status: " + STATUS)
     file.write(STATUS)
     file.close()
