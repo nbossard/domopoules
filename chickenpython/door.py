@@ -8,7 +8,7 @@ import time
 import logging
 
 TIME_CLOSE = 99
-TIME_OPEN = 65
+TIME_OPEN = 69
 STATUSFILENAME = "/home/pi/domopoules/chickenpython/status.txt"
 motor = Motor(forward=17, backward=22)
 button = Button(2)
