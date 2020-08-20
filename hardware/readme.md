@@ -11,6 +11,5 @@
 | Controleur de charge      | 14€   | <https://www.amazon.fr/gp/product/B071ZZ2S84>                                                               |
 | panneau solaire 12 v 10 w | 22€   | <https://www.amazon.fr/gp/product/B00TYDIMJU>                                                               |
 | batterie 12V 7Ah          | 19€   | <https://www.amazon.fr/gp/product/B009D0KFOO>                                                               |
-|---------------------------|-------|-------------------------------------------------------------------------------------------------------------|
 | TOTAL                     | 86.0  |                                                                                                             |
->  tmf: $8,2=Sum(3:7)
+>  tmf: $7,2=Sum(3:6)
