@@ -1,1 +1,3 @@
 chickenpython/chicken.log
+*.swp
+.DS_Store
