@@ -11,7 +11,7 @@ Appuyez sur P pour voir les notes. Puis C pour cloner l'affichage.
 
 Les poules, parfait pour occuper les enfants pendant le confinement.
 
-<img src="./enfant_poules.jpg" height="300" alt="Vue écrans Jeedom">
+<img src="./resources/enfant_poules.jpg" height="300" alt="Vue écrans Jeedom">
 
 ???
 Mais pas mal de contraintes, dont ouvrir et fermer la porte matin et soir
@@ -32,7 +32,7 @@ Objectifs suivants : présence des poules en intérieur, nombre d'oeufs.
 
 ## Des solutions éxistent sur le marché
 
-<img src="./chickenguard.jpg" height="80%" alt="Vue écrans Jeedom">
+<img src="./resources/chickenguard.jpg" height="80%" alt="Vue écrans Jeedom">
 
 ???
 Ici chickenguard
@@ -53,7 +53,7 @@ Mais cher(140€), pas domotisé, pas adapté à ma cabane.
 
 ## Présentation de Jeedom
 
-<img src="./jeedom_overview.jpg" width="100%" alt="Vue écrans Jeedom">
+<img src="./resources/jeedom_overview.jpg" width="100%" alt="Vue écrans Jeedom">
 
 Open source. Français.
 
@@ -65,7 +65,7 @@ TODO graphique Jeedom avec ses plugins
 
 ### Business model
 
-<img src="./logo_jeedom.png" width="10%" alt="Vue écrans Jeedom">
+<img src="./resources/logo_jeedom.png" width="10%" alt="Vue écrans Jeedom">
 
 Vente de:
 
@@ -78,7 +78,7 @@ Vente de:
 
 ## Présentation du raspberry pi zero WH
 
-<img src="./raspberry_family.jpg" width="50%" alt="Vue écrans Jeedom">
+<img src="./resources/raspberry_family.jpg" width="50%" alt="Vue écrans Jeedom">
 
 Photo de famille : 0 / 1 / 2 / 3 / 4
 
@@ -86,7 +86,7 @@ Photo de famille : 0 / 1 / 2 / 3 / 4
 
 ## Présentation du raspberry pi zero WH - 2
 
-<img src="./raspberry-pi-zero-wh-kubii.jpg" height="80%" alt="Vue écrans Jeedom">
+<img src="./resources/raspberry-pi-zero-wh-kubii.jpg" height="80%" alt="Vue écrans Jeedom">
 
 <https://www.kubii.fr/cartes-raspberry-pi/2076-raspberry-pi-zero-wh-kubii-3272496009394.html>
 
@@ -107,7 +107,7 @@ https://gpiozero.readthedocs.io/en/stable/recipes.html
 
 ## Le problème de la portée
 
-<img src="./jardin_vue_helico.png" width="100%" alt="La maison et le poulailler sur la gauche">
+<img src="./resources/jardin_vue_helico.png" width="100%" alt="La maison et le poulailler sur la gauche">
 Le poulailler est à TODO mètres de la box domotique
 
 zigbee ==> KO
@@ -120,13 +120,13 @@ Wi-Fi ==> OK
 
 Probablement plus au hardware
 
-<img src="./synology_rt2600ac.jpg" width="60%" alt="Un vrai routeur Wi-Fi">
+<img src="./resources/synology_rt2600ac.jpg" width="60%" alt="Un vrai routeur Wi-Fi">
 
 ---
 
 ### Mais est-ce lié au protocole - 2
 
-<img src="./cle_usb_zwave.jpg" width="60%" alt="clé usb zwave">
+<img src="./resources/cle_usb_zwave.jpg" width="60%" alt="clé usb zwave">
 
 ???
 
