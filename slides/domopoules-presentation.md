@@ -63,7 +63,7 @@ TODO graphique Jeedom avec ses plugins
 
 ---
 
-### Business model
+## Jeedom - Business model
 
 <img src="./resources/logo_jeedom.png" width="10%" alt="Vue écrans Jeedom">
 
@@ -73,6 +73,57 @@ Vente de:
 - plugins
 - service de sauvegarde
 - noms de domaine
+
+---
+
+## Le problème de la portée
+
+<img src="./resources/jardin_vue_helico.png" width="100%" alt="La maison et le poulailler sur la gauche">
+Le poulailler est à 30 mètres de la box domotique
+
+- zigbee ==> KO
+- z-wave ==> MOUAIS
+- Wi-Fi ==> OK
+
+---
+
+## Rappel réseaux maillé
+
+<img src="./resources/z-wave_avec_routage.png" width="100%" alt="réseau maillé">
+
+???
+zwave réseau maillé qui se reconfigure
+
+---
+
+### Mais est-ce lié au protocole
+
+<img src="./resources/cle_usb_zwave.jpg" width="60%" alt="clé usb zwave">
+
+???
+
+---
+
+### Mais est-ce lié au protocole - 2
+
+Probablement plus au hardware
+
+<img src="./resources/synology_rt2600ac.jpg" width="60%" alt="Un vrai routeur Wi-Fi">
+
+???
+Quoi qu'il en soit ce sera du Wi-Fi
+
+---
+
+## solutions abandonnées
+
+<img src="./resources/nodemcu_esp8266.jpg" width="60%" alt="Node MCU">
+
+Node MCU ESP 8266 ==> un arduino avec du Wi-Fi
+
+???
+
+trop bas niveau pour moi, trop lourd à mettre à jour.
 
 ---
 
@@ -113,36 +164,9 @@ https://gpiozero.readthedocs.io/en/stable/recipes.html
 
 ---
 
-## Le problème de la portée
-
-<img src="./resources/jardin_vue_helico.png" width="100%" alt="La maison et le poulailler sur la gauche">
-Le poulailler est à TODO mètres de la box domotique
-
-zigbee ==> KO
-z-wave ==> MOUAIS
-Wi-Fi ==> OK
-
----
-
-### Mais est-ce lié au protocole
-
-Probablement plus au hardware
-
-<img src="./resources/synology_rt2600ac.jpg" width="60%" alt="Un vrai routeur Wi-Fi">
-
----
-
-### Mais est-ce lié au protocole - 2
-
-<img src="./resources/cle_usb_zwave.jpg" width="60%" alt="clé usb zwave">
-
-???
-
----
-
 ### La solution technique
 
-<img src="../hardware/IMG_20200723_000108_recadre.jpg" width="700" alt="clé usb zwave">
+<img src="../hardware/IMG_20200723_000108_recadre.jpg" width="700" alt="vue montage">
 
 ????
 
@@ -184,7 +208,7 @@ def close_door():
       time_spent+=1
     motor.stop()
 ```
-????
+???
 
 
 ---
@@ -203,10 +227,48 @@ Que Neni
 
 ---
 
+## surveillance vidéo
+
+<img src="./resources/jeedom_mobile_poulailler.png" width="250" alt="poulailler de nuit">
+<img src="./resources/reconnaissance_oeufs.png" width="300" alt="oeufs reconnaissance">
+
+???
+
+Etape suivante naturelle dans la domotisation : la vidéo surveillance
+Permettre :
+- surveillance poules
+- détection ponte
+
+Là encore le raspberry pi zero peut aider.
+
+---
+
+## surveillance vidéo 2 - raspberry pi zero
+
+<img src="./resources/Pi-Zero-W-details.jpg" width="600" alt="ports">
+
+---
+
+## surveillance vidéo 3 - raspberry pi zero
+
+<img src="./resources/Pi-Zero-W-official-case.jpg" width="600" alt="clé usb zwave">
+
+???
+
+
+
+---
+
 ## Motion eye OS
+
+<https://github.com/ccrisan/motioneyeos>
+
+<img src="./resources/motioneyeos.ico" width="100" alt="clé usb zwave">
+<img src="./resources/motioneye_mobile.png" width="100" alt="clé usb zwave">
+
 
 ---
 
 ## Pour aller plus loin
 
-
+<https://www.framboise314.fr/un-poulailler-connecte-avec-un-raspberry-pi/>

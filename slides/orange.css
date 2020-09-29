@@ -1,0 +1,302 @@
+/* general styling */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.remark-container {
+    background-color: rgb(143, 143, 143);
+}
+
+.remark-slide-content {
+    font-size: 18px;
+    padding: 1em 2em;
+}
+
+.remark-code {
+    background-color: rgb(230, 230, 230) !important;
+}
+
+.remark-inline-code {
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 10px solid rgb(204, 204, 204);
+    padding: 0 .5em;
+    font-style: italic;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.black {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/*  image styling, resize images. for instance  .img-50pct[![my-alt](my-file.png)] */
+
+.img-75pct img {
+    width: 75%;
+}
+
+.img-50pct img {
+    width: 50%;
+}
+
+.img-25pct img {
+    width: 25%;
+}
+
+/* links styling */
+
+.black a {
+    color: rgb(170, 170, 170);
+}
+
+.black a:visited {
+    color: rgb(136, 136, 136);
+}
+
+.black a:hover {
+    color: rgb(204, 204, 204);
+}
+/* two columns styling */
+
+.two-cols .col-left {
+    width: 49%;
+    max-height: 100%;
+    float: left;
+}
+
+.two-cols .col-right {
+    margin-left: 51%;
+}
+
+/* list styling */
+
+ul > li {
+    list-style: none;
+    position: relative;
+}
+
+ul > li:before {
+    content: '– ';
+    font-weight: bold;
+}
+
+ul ul > li:before {
+    content: '- ';
+}
+
+ol {
+    counter-reset: item;
+}
+
+li {
+    display: block;
+}
+
+ol > li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+}
+
+/* definition list styling */
+
+dt {
+  float: left;
+  clear: left;
+}
+dd {
+  padding-left: 50px;
+}
+dt:before {
+  content: "- ";
+}
+dt:after {
+  content: " :";
+}
+
+/* colors styling */
+
+.orange {
+    color: rgb(255, 120, 0);
+}
+
+.bgorange {
+    background-color: rgb(255, 120, 0);
+}
+
+.blue {
+    color: rgb(75, 180, 230);
+}
+
+.bgblue {
+    background-color: rgb(75, 180, 230);
+}
+
+.yellow {
+    color: rgb(255, 220, 0);
+}
+
+.bgyellow {
+    background-color: rgb(255, 220, 0);
+}
+
+.green {
+    color: rgb(80, 190, 135);
+}
+
+.bggreen {
+    background-color: rgb(80, 190, 135);
+}
+
+.purple {
+    color: rgb(145, 100, 205);
+}
+
+.bgpurple {
+    background-color: rgb(145, 100, 205);
+}
+
+.pink {
+    color: rgb(255, 180, 230);
+}
+
+.bgpink {
+    background-color: rgb(255, 180, 230);
+}
+
+/* title styling */
+
+h1 {
+    font-size: 44px !important;
+    color: rgb(255, 120, 0);
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 30px !important;
+    color: rgb(255, 120, 0);
+    margin: 5px 0;
+}
+
+/* cover (first page) styling */
+
+#slide-cover .logo img {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 10%;
+}
+
+#slide-cover .date {
+    position: absolute;
+    color: rgb(255, 120, 0);
+    right: 5%;
+    top: 10%;
+}
+
+#slide-cover h1 {
+    font-size: 75px !important;
+    color: black;
+}
+
+#slide-cover.black h1 {
+    color: rgb(255, 255, 255);
+}
+
+#slide-cover h1::before {
+    color: rgb(255, 120, 0);
+    content: 'Orange\A';
+    white-space: pre;
+}
+
+#slide-cover h1,
+#slide-cover h2 {
+    width: 90%;
+}
+
+#slide-cover .footer,
+#slide-cover .remark-slide-number {
+    display: none;
+}
+
+/* back (last page) styling */
+
+#slide-back-cover .logo img {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 10%;
+}
+
+#slide-back-cover .footer,
+#slide-back-cover .remark-slide-number {
+    display: none;
+}
+
+#slide-back-cover h1 {
+    font-size: 75px !important;
+    color: black;
+}
+
+#slide-back-cover.black h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* annex styling */
+
+.annex .remark-slide-number {
+    display: none;
+}
+
+/* table styling */
+
+.remark-slides-area table td,
+.remark-slides-area table th {
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+}
+
+.remark-slides-area table th {
+    background: rgb(255, 120, 0);
+    color: rgb(255, 255, 255);
+}
+
+.remark-slides-area table tr:nth-child(2n+1) {
+    background-color: rgb(230, 230, 230);
+}
+
+.remark-slides-area .black table tr:nth-child(2n+1) {
+    background-color: rgb(89, 89, 89);
+}
+
+/* footer logo and baseline */
+
+.remark-slide-number {
+    bottom: 5%;
+    left: 5%;
+    right: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5%;
+    left: 12%;
+    color: rgb(255, 120, 0);
+}
+
+/* end of file */
