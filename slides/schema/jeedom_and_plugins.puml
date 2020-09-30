@@ -1,0 +1,16 @@
+@startuml
+
+[Jeedom] -d- [Plugin Zwave]
+[Jeedom] -d- [Plugin Zigate]
+[Jeedom] -d- [Plugin Bluetooth]
+[Jeedom] -d- [Plugin Network]
+[Jeedom] -d- [Plugin script]
+
+[Plugin Zigate] -d- [Clé USB Zigate]
+[Plugin Zwave] -d- [Clé USB Zwave]
+
+[Clé USB Zwave] -d- [Devices Fibaro (Homelive)] : zigate
+[Clé USB Zigate] -d- [Devices ikea] : zigbee
+[Clé USB Zigate] -d- [Devices Aqara (Xiaomi)] : zigbee
+
+@enduml
