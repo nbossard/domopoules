@@ -1,8 +1,11 @@
 # Présentation du projet Domopoules
 
+
 <img src="../hardware/IMG_20200727_080342.jpg" height="250" alt="Poules sortant">
 
+
 Présentation réalisé avec Remark.js pour le Dev and Test Day 2020 (Orange)
+
 Appuyez sur P pour voir les notes. Puis C pour cloner l'affichage.
 
 ---
@@ -11,7 +14,7 @@ Appuyez sur P pour voir les notes. Puis C pour cloner l'affichage.
 
 Les poules, parfait pour occuper les enfants pendant le confinement.
 
-<img src="./resources/enfant_poules.jpg" height="300" alt="Vue écrans Jeedom">
+<img src="./resources/enfant_poules.jpg" height="300" alt="Albin avec une poule dans les bras">
 
 ???
 Mais pas mal de contraintes, dont ouvrir et fermer la porte matin et soir
@@ -27,6 +30,15 @@ __Premier objectif : ouvrir automatiquement la porte du poulailler__
 
 Objectifs suivants : présence des poules en intérieur, nombre d'oeufs.
 
+---
+
+## Agenda
+
+1. Présentation de Jeedom
+1. Présentation du raspberry pi zero WH
+2. Le problème de la portée
+3. Le problème de l'alimentation
+4. ...
 
 ---
 
@@ -41,16 +53,6 @@ Mais cher(140€), pas domotisé, pas adapté à ma cabane.
 
 ---
 
-## Agenda
-
-1. Présentation de Jeedom
-1. Présentation du raspberry pi zero WH
-2. Le problème de la portée
-3. Le problème de l'alimentation
-4. ...
-
----
-
 ## Présentation de Jeedom
 
 <img src="./resources/jeedom_overview.jpg" width="100%" alt="Vue écrans Jeedom">
@@ -60,6 +62,12 @@ Open source. Français.
 ???
 Système très ouvert : compatible zwave, philips Hue,  ikea...
 TODO graphique Jeedom avec ses plugins
+
+---
+
+## Présentation de Jeedom - 2
+
+<img src="./schema/jeedom_and_plugins.png" width="100%" alt="Vue écrans Jeedom">
 
 ---
 
@@ -150,9 +158,18 @@ Pas cher : 10-15€, mais il faut y ajouter la carte SD
 
 ---
 
+## Présentation de Rpi.GPIO
+
+<https://pypi.org/project/RPi.GPIO/>
+
+???
+Date de 2012
+
+---
+
 ## présentation de gpiozero
 
-https://gpiozero.readthedocs.io/en/stable/recipes.html
+<https://gpiozero.readthedocs.io/en/stable/recipes.html>
 
 <img src="./resources/gpio_zero_button.png" width="80%" alt="">
 
@@ -181,7 +198,7 @@ https://gpiozero.readthedocs.io/en/stable/recipes.html
 
 ---
 
-### La solution technique - 2 Code (simplifié)
+## La solution technique - 2 Code (simplifié)
 
 ```python
 from gpiozero import Motor
@@ -210,6 +227,39 @@ def close_door():
 ```
 ???
 
+---
+
+## La solution technique - 2 Code (simplifié)
+
+```python
+import RPi.GPIO as gpio
+import datetime
+import time
+import logging
+
+TIME_CLOSE = 100
+TIME_OPEN = 83
+
+def init():
+    gpio.setmode(gpio.BCM)
+    gpio.setup(17, gpio.OUT)
+    gpio.setup(22, gpio.OUT)
+
+
+def open_door():
+    gpio.output(17, True)
+    gpio.output(22, False)
+    time.sleep(TIME_CLOSE)
+    gpio.cleanup()
+
+def close_door():
+    gpio.output(17, False)
+    gpio.output(22, True)
+    time.sleep(TIME_OPEN)
+    gpio.cleanup()
+
+
+```
 
 ---
 
@@ -218,6 +268,12 @@ def close_door():
 Naivement je pensais que le raspberry pi zero ne consommerait rien et tiendrait qques semaines sur une batterie USB...
 
 Que Neni
+Consommation :
+
+Raspberry pi zero WA : 90ma
+L298 : 6mA (si VEN = LOW), 24mA sinon.
+
+TODO
 
 ---
 
