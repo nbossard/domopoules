@@ -33,6 +33,11 @@ Présentation réalisé avec Remark.js pour le Dev and Test Day 2020 (Orange)
 
 Appuyez sur P pour voir les notes. Puis C pour cloner l'affichage.
 
+???
+Présentation qui durera 20 minutes
+
+Comme tout le monde j'ai pris des poules pendant le confinement
+
 ---
 
 ## Introduction
@@ -55,15 +60,20 @@ __Premier objectif : ouvrir automatiquement la porte du poulailler__
 
 Objectifs suivants : présence des poules en intérieur, nombre d'oeufs.
 
+???
+Pratique de la domotique dans la maison depuis qques années.
+
 ---
 
 ## Agenda
 
-1. Présentation de Jeedom
-1. Présentation du raspberry pi zero WH
+1. Présentation de centrale domotique sous Jeedom
 2. Le problème de la portée
-3. Le problème de l'alimentation
-4. ...
+3. Le coeur du système, le raspberry pi zero WH
+4. La couche logicielle
+5. La solution technique
+6. Le problème de l'alimentation
+7. Pour aller plus loin
 
 ---
 
@@ -82,30 +92,43 @@ Mais cher(140€), pas domotisé, pas adapté à ma cabane.
 
 <img src="./resources/jeedom_overview.jpg" width="100%" alt="Vue écrans Jeedom">
 
-Open source. Français.
+Open source. Français (Lyon).
 
 ???
-Système très ouvert : compatible zwave, philips Hue,  ikea...
-TODO graphique Jeedom avec ses plugins
+
+S'installe sur un raspberry pi (3 ou 4 pas zero)
+
+Système très ouvert : compatible zwave, philips Hue,  ikea..., google smarthome, alexa...
 
 ---
 
-## Présentation de Jeedom - 2
+## Présentation de Jeedom - 2 - les plugins
 
 <img src="./schema/jeedom_and_plugins.png" width="100%" alt="Vue écrans Jeedom">
 
+???
+
+possibilité de réutiliser périphériques homelive
+
+possibilité de changer de technologie
+
 ---
 
-## Jeedom - Business model
+## Présentation de Jeedom - 3 - Business model
 
 <img src="./resources/logo_jeedom.png" width="10%" alt="Vue écrans Jeedom">
 
 Vente de:
 
-- boxs sur étagère
+- boxes sur étagère
 - plugins
-- service de sauvegarde
-- noms de domaine
+- service de sauvegarde, de SMS, de noms de domaine
+
+???
+
+testé également domoticz
+
+Au final une bonne solution stable évolutive peu couteuse
 
 ---
 
@@ -120,7 +143,7 @@ Le poulailler est à 30 mètres de la box domotique
 
 ---
 
-## Rappel réseaux maillé
+## Le problème de la portée - 2 - Rappel réseaux maillé
 
 <img src="./resources/z-wave_avec_routage.png" width="100%" alt="réseau maillé">
 
@@ -129,7 +152,7 @@ zwave réseau maillé qui se reconfigure
 
 ---
 
-### Mais est-ce lié au protocole
+## Le problème de la portée - 3 - Mais est-ce lié au protocole
 
 <img src="./resources/cle_usb_zwave.jpg" width="60%" alt="clé usb zwave">
 
@@ -137,7 +160,7 @@ zwave réseau maillé qui se reconfigure
 
 ---
 
-### Mais est-ce lié au protocole - 2
+## Le problème de la portée - 4 - Mais est-ce lié au protocole
 
 Probablement plus au hardware
 
@@ -148,7 +171,7 @@ Quoi qu'il en soit ce sera du Wi-Fi
 
 ---
 
-## solutions abandonnées
+## Le coeur du système - solutions abandonnées
 
 <img src="./resources/nodemcu_esp8266.jpg" width="60%" alt="Node MCU">
 
@@ -160,7 +183,7 @@ trop bas niveau pour moi, trop lourd à mettre à jour.
 
 ---
 
-## Présentation du raspberry pi zero WH
+## Le coeur du système - 2 - Raspberry pi zero WH
 
 <img src="./resources/raspberry_family.jpg" width="50%" alt="Vue écrans Jeedom">
 
@@ -168,14 +191,14 @@ Photo de famille : 0 / 1 / 2 / 3 / 4
 
 ---
 
-## Présentation du raspberry pi zero WH - 2
+## Le coeur du système - 3 - Raspberry pi zero WH
 
 <img src="./resources/raspberry-pi-zero-wh-kubii.jpg" height="80%" alt="Vue écrans Jeedom">
 
 <https://www.kubii.fr/cartes-raspberry-pi/2076-raspberry-pi-zero-wh-kubii-3272496009394.html>
 
 ???
-
+Le raspberry pi zero + W ==> du Wi-Fi + H ==> connecteur GPIO soudé
 Pour ceux qui galèrent avec les arduino / ESP TODO
 Un vrai linux accessible en SSH, un vrai IDE direct dessus (Vim), Git...
 On peut écrire directement en python
@@ -183,7 +206,7 @@ Pas cher : 10-15€, mais il faut y ajouter la carte SD
 
 ---
 
-## Présentation de Rpi.GPIO
+## La couche logicielle - Présentation de Rpi.GPIO
 
 <https://pypi.org/project/RPi.GPIO/>
 
@@ -192,7 +215,7 @@ Date de 2012
 
 ---
 
-## présentation de gpiozero
+## La couche logicielle - 2 - présentation de gpiozero
 
 <https://gpiozero.readthedocs.io/en/stable/recipes.html>
 
@@ -200,13 +223,13 @@ Date de 2012
 
 ---
 
-## présentation de gpiozero - 2
+## La couche logicielle - 3 - présentation de gpiozero - 2
 
 <img src="./resources/gpio_zero_motor.png" width="80%" alt="">
 
 ---
 
-### La solution technique
+## La solution technique
 
 <img src="../hardware/IMG_20200723_000108_recadre.jpg" width="700" alt="vue montage">
 
@@ -214,12 +237,15 @@ Date de 2012
 
 ---
 
-### La solution technique - 2 Pont en H L298N
+## La solution technique - 2 Pont en H L298N
 
 <img src="./resources/L298N.jpeg" width="700" alt="clé usb zwave">
 
 ????
 
+Réagir à un ordre de faible puissance envoyé par le raspberry pi en envoyant du courant de plus forte puissance.
+
+Coût 5€
 
 ---
 
@@ -230,27 +256,25 @@ from gpiozero import Motor
 from gpiozero import Button
 import time
 
-TIME_CLOSE = 99
-TIME_OPEN = 69
 motor = Motor(forward=17, backward=22)
 button = Button(2)
 
-button.when_pressed = info_button_pressed
-
 def open_door():
     motor.forward()
-    time.sleep(TIME_OPEN)
+    time.sleep(69)
     motor.stop()
 
 def close_door():
     time_spent=0
     motor.backward()
-    while not button.is_pressed and time_spent<TIME_CLOSE:
+    while not button.is_pressed and time_spent<99:
       time.sleep(1)
       time_spent+=1
     motor.stop()
 ```
 ???
+
+Code appellé en SSH via le plugin script de Jeedom
 
 ---
 
@@ -264,8 +288,6 @@ import logging
 
 TIME_CLOSE = 100
 TIME_OPEN = 83
-FILENAME = "/opt/chickendoor/status.txt"
-LOGFILE = "/opt/chickendoor/chicken.log"
 
 def init():
     gpio.setmode(gpio.BCM)
@@ -284,8 +306,6 @@ def close_door():
     gpio.output(22, True)
     time.sleep(TIME_OPEN)
     gpio.cleanup()
-
-
 ```
 
 ---
@@ -295,16 +315,47 @@ def close_door():
 Naivement je pensais que le raspberry pi zero ne consommerait rien et tiendrait qques semaines sur une batterie USB...
 
 Que Neni
+Consommation :
+
+Raspberry pi zero WH : 90mah
+L298 : 6mAh (si VEN = LOW), 24mAh sinon.
+
+104mah pour une batterie de 7Ah ===> 3 jours
 
 ---
 
-## Alimentation solution
+## Le problème de l'alimentation - solution solaire
 
-<img src="../hardware/IMG_20200724_181459.jpg" width="60%" alt="clé usb zwave">
+<img src="../hardware/IMG_20200724_181459.jpg" width="60%" alt="solution solaire">
+
+???
+
+cout
+
+| Article                   | tarif | ref                                                                                                         |
+|---------------------------|-------|-------------------------------------------------------------------------------------------------------------|
+| Controleur de charge      | 14€   | <https://www.amazon.fr/gp/product/B071ZZ2S84>                                                               |
+| panneau solaire 12 v 10 w | 22€   | <https://www.amazon.fr/gp/product/B00TYDIMJU>                                                               |
+| batterie 12V 7Ah          | 19€   | <https://www.amazon.fr/gp/product/B009D0KFOO>                                                               |
 
 ---
 
-## surveillance vidéo
+## Coût final
+
+| Article                   | tarif |
+|---------------------------|-------|
+| pont en H                 | 5€    |
+| raspberry pi zero W       | 11€   |
+| moteur 12 V à engrenage   | 17€   |
+| boitier electrique        | 14€   |
+| Controleur de charge      | 14€   |
+| panneau solaire 12 v 10 w | 22€   |
+| batterie 12V 7Ah          | 19€   |
+| TOTAL                     | 102   |
+
+---
+
+## Pour aller plus loin - surveillance vidéo
 
 <img src="./resources/jeedom_mobile_poulailler.png" width="250" alt="poulailler de nuit">
 <img src="./resources/reconnaissance_oeufs.png" width="300" alt="oeufs reconnaissance">
@@ -320,23 +371,21 @@ Là encore le raspberry pi zero peut aider.
 
 ---
 
-## surveillance vidéo 2 - raspberry pi zero
+## Pour aller plus loin - 2 - raspberry zero WH
 
 <img src="./resources/Pi-Zero-W-details.jpg" width="600" alt="ports">
 
 ---
 
-## surveillance vidéo 3 - raspberry pi zero
+## Pour aller plus loin - 3 - raspberry zero WH
 
 <img src="./resources/Pi-Zero-W-official-case.jpg" width="600" alt="clé usb zwave">
 
 ???
 
-
-
 ---
 
-## Motion eye OS
+## Pour aller plus loin - 4 - Motion eye OS
 
 <https://github.com/ccrisan/motioneyeos>
 
