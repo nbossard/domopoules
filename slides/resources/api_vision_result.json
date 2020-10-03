@@ -1,0 +1,391 @@
+{
+  "cropHintsAnnotation": {
+    "cropHints": [
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 302
+            },
+            {
+              "x": 1512
+            },
+            {
+              "x": 1512,
+              "y": 1511
+            },
+            {
+              "x": 302,
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.6803385,
+        "importanceFraction": 1
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 100
+            },
+            {
+              "x": 1612
+            },
+            {
+              "x": 1612,
+              "y": 1511
+            },
+            {
+              "x": 100,
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.5442708,
+        "importanceFraction": 1
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {},
+            {
+              "x": 1814
+            },
+            {
+              "x": 1814,
+              "y": 1511
+            },
+            {
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.453559,
+        "importanceFraction": 1
+      }
+    ]
+  },
+  "imagePropertiesAnnotation": {
+    "cropHints": [
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 302
+            },
+            {
+              "x": 1512
+            },
+            {
+              "x": 1512,
+              "y": 1511
+            },
+            {
+              "x": 302,
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.6803385,
+        "importanceFraction": 1
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 100
+            },
+            {
+              "x": 1612
+            },
+            {
+              "x": 1612,
+              "y": 1511
+            },
+            {
+              "x": 100,
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.5442708,
+        "importanceFraction": 1
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {},
+            {
+              "x": 1814
+            },
+            {
+              "x": 1814,
+              "y": 1511
+            },
+            {
+              "y": 1511
+            }
+          ]
+        },
+        "confidence": 0.453559,
+        "importanceFraction": 1
+      }
+    ],
+    "dominantColors": {
+      "colors": [
+        {
+          "color": {
+            "blue": 56,
+            "green": 51,
+            "red": 48
+          },
+          "hex": "303338",
+          "percent": 21.372979784595834,
+          "percentRounded": 21,
+          "pixelFraction": 0.05876106,
+          "rgb": "48, 51,\n 56",
+          "score": 0.13585828
+        },
+        {
+          "color": {
+            "blue": 102,
+            "green": 84,
+            "red": 74
+          },
+          "hex": "4A5466",
+          "percent": 15.05873010831342,
+          "percentRounded": 15,
+          "pixelFraction": 0.016578171,
+          "rgb": "74, 84,\n 102",
+          "score": 0.095721476
+        },
+        {
+          "color": {
+            "blue": 165,
+            "green": 190,
+            "red": 205
+          },
+          "hex": "CDBEA5",
+          "percent": 7.355485812203258,
+          "percentRounded": 7,
+          "pixelFraction": 0.098643064,
+          "rgb": "205, 190,\n 165",
+          "score": 0.046755467
+        },
+        {
+          "color": {
+            "blue": 41,
+            "green": 211,
+            "red": 134
+          },
+          "hex": "86D329",
+          "percent": 4.502329150981846,
+          "percentRounded": 5,
+          "pixelFraction": 0.005073746,
+          "rgb": "134, 211,\n 41",
+          "score": 0.028619252
+        },
+        {
+          "color": {
+            "blue": 57,
+            "green": 174,
+            "red": 120
+          },
+          "hex": "78AE39",
+          "percent": 3.378466508458048,
+          "percentRounded": 3,
+          "pixelFraction": 0.0045427727,
+          "rgb": "120, 174,\n 57",
+          "score": 0.02147537
+        },
+        {
+          "color": {
+            "blue": 25,
+            "green": 24,
+            "red": 27
+          },
+          "hex": "1B1819",
+          "percent": 13.683226310549868,
+          "percentRounded": 14,
+          "pixelFraction": 0.0559882,
+          "rgb": "27, 24,\n 25",
+          "score": 0.086978026
+        },
+        {
+          "color": {
+            "blue": 140,
+            "green": 119,
+            "red": 107
+          },
+          "hex": "6B778C",
+          "percent": 9.826365230526141,
+          "percentRounded": 10,
+          "pixelFraction": 0.010914454,
+          "rgb": "107, 119,\n 140",
+          "score": 0.06246172
+        },
+        {
+          "color": {
+            "blue": 87,
+            "green": 81,
+            "red": 78
+          },
+          "hex": "4E5157",
+          "percent": 9.032143836280083,
+          "percentRounded": 9,
+          "pixelFraction": 0.020530973,
+          "rgb": "78, 81,\n 87",
+          "score": 0.057413217
+        },
+        {
+          "color": {
+            "blue": 70,
+            "green": 54,
+            "red": 46
+          },
+          "hex": "2E3646",
+          "percent": 8.393762478184488,
+          "percentRounded": 8,
+          "pixelFraction": 0.009439528,
+          "rgb": "46, 54,\n 70",
+          "score": 0.053355318
+        },
+        {
+          "color": {
+            "blue": 26,
+            "green": 45,
+            "red": 63
+          },
+          "hex": "3F2D1A",
+          "percent": 7.39651077990701,
+          "percentRounded": 7,
+          "pixelFraction": 0.092861354,
+          "rgb": "63, 45,\n 26",
+          "score": 0.047016244
+        }
+      ]
+    }
+  },
+  "labelAnnotations": [
+    {
+      "description": "Vertebrate",
+      "mid": "/m/09686",
+      "score": 0.9851104,
+      "topicality": 0.9851104
+    },
+    {
+      "description": "Bird",
+      "mid": "/m/015p6",
+      "score": 0.98163724,
+      "topicality": 0.98163724
+    },
+    {
+      "description": "Galliformes",
+      "mid": "/m/01295w",
+      "score": 0.92497164,
+      "topicality": 0.92497164
+    },
+    {
+      "description": "Chicken",
+      "mid": "/m/09b5t",
+      "score": 0.91069317,
+      "topicality": 0.91069317
+    },
+    {
+      "description": "Beak",
+      "mid": "/m/01c4rd",
+      "score": 0.88116693,
+      "topicality": 0.88116693
+    },
+    {
+      "description": "Fowl",
+      "mid": "/m/025rv6n",
+      "score": 0.77236944,
+      "topicality": 0.77236944
+    },
+    {
+      "description": "Phasianidae",
+      "mid": "/m/01dy62",
+      "score": 0.661174,
+      "topicality": 0.661174
+    },
+    {
+      "description": "Poultry",
+      "mid": "/m/05s0c",
+      "score": 0.62458074,
+      "topicality": 0.62458074
+    },
+    {
+      "description": "Plant",
+      "mid": "/m/05s2s",
+      "score": 0.58547497,
+      "topicality": 0.58547497
+    },
+    {
+      "description": "Livestock",
+      "mid": "/m/0ch8v",
+      "score": 0.5040175,
+      "topicality": 0.5040175
+    }
+  ],
+  "localizedObjectAnnotations": [
+    {
+      "boundingPoly": {
+        "normalizedVertices": [
+          {
+            "x": 0.45827892,
+            "y": 0.29392377
+          },
+          {
+            "x": 0.8741661,
+            "y": 0.29392377
+          },
+          {
+            "x": 0.8741661,
+            "y": 0.89084935
+          },
+          {
+            "x": 0.45827892,
+            "y": 0.89084935
+          }
+        ]
+      },
+      "mid": "/m/015p6",
+      "name": "Bird",
+      "score": 0.84606415
+    },
+    {
+      "boundingPoly": {
+        "normalizedVertices": [
+          {
+            "x": 0.17204207,
+            "y": 0.18732552
+          },
+          {
+            "x": 0.5322351,
+            "y": 0.18732552
+          },
+          {
+            "x": 0.5322351,
+            "y": 0.56063956
+          },
+          {
+            "x": 0.17204207,
+            "y": 0.56063956
+          }
+        ]
+      },
+      "mid": "/m/015p6",
+      "name": "Bird",
+      "score": 0.77833456
+    }
+  ],
+  "safeSearchAnnotation": {
+    "adult": "VERY_UNLIKELY",
+    "medical": "UNLIKELY",
+    "racy": "UNLIKELY",
+    "spoof": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY"
+  }
+}
