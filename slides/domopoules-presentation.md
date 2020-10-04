@@ -1,11 +1,9 @@
-layout: true
 
-.footer[Orange internal]
 
 ---
 name: cover
 
-.logo[![logo](images/logo.svg)]
+.logo[![logo](resources/logo.svg)]
 
 # Domopoules - domotisation d'un poulailler
 
@@ -18,8 +16,12 @@ name: cover
 Bon vous avez comme tout le monde, vous avez pris des poules pendant le confinement, les enfants sont ravis...
 mais fermer la porte matin et soir vous fatigue et aussi surveiller les volailles à distance serait bien pratique,
 tout ça manque de domotique...
+
 Cette session est pour ceux qui comme moi sont vraiment nuls en électronique mais adorent la domotique.
+
 On y parlera aussi de protocoles, portée et consommation électrique.
+
+
 Mots clés: raspberry pi zero W, raspbian, python, jeedom, zigbee, z-wave, motion eye os, panneaux solaires...
 
 ---
@@ -44,7 +46,7 @@ Comme tout le monde j'ai pris des poules pendant le confinement
 Les poules, parfait pour occuper les enfants pendant le confinement.
 
 .col-left[ <img src="./resources/enfant_poules.jpg" height="300" alt="Albin avec une poule dans les bras">]
-.col-right[ <img src="../hardware/IMG_20200727_080342.jpg" height="250" alt="Poules sortant">]
+.col-right[  <img src="./resources/poulailler.jpg" height="300" alt="la cabane poulailler">]
 
 ???
 Mais pas mal de contraintes, dont ouvrir et fermer la porte matin et soir
@@ -57,12 +59,28 @@ Le poulailler le lieu parfait pour innover en domotique.
 
 Objectifs:
 
-- ouvrir automatiquement la porte du poulailler
+- **ouvrir automatiquement la porte du poulailler**
 - Objectifs suivants : surveillance (présence des poules en intérieur, nombre d'oeufs...)
+- nourrissage automatique des poules
 
 ???
 Pratique de la domotique dans la maison depuis qques années.
 Le WAF est très bon.
+
+---
+
+## Introduction - 3 solutions sur étagère
+
+.col-left[<img src="../hardware/IMG_20200727_080342.jpg" height="250" alt="Poules sortant">]
+.col-right[ <img src="./resources/chickenguard.jpg" height="250" alt="chickenguard">]
+
+
+... chers, pas domotisés, inadaptées
+???
+
+Ici chickenguard
+Mais cher(140€), pas domotisé, pas adapté à ma cabane.
+
 
 ---
 
@@ -82,7 +100,7 @@ Le WAF est très bon.
 
 <img src="./resources/jeedom_overview.jpg" width="100%" alt="Vue écrans Jeedom">
 
-Open source. Français (Lyon).
+Open source. Français (Lyon). 2014.
 
 ???
 
@@ -106,6 +124,8 @@ possibilité de changer de technologie au fil du temps : abstraction des devices
 
 passage des devices homelive (z-wave) à des device aqara (zigbee) puis bluetooth / Wi-Fi
 
+Communauté importante fait qu'il y a des plugins pour tout (même pour pioter la Livebox !!!)
+
 ---
 
 ## Présentation de Jeedom - 3 - Business model
@@ -116,7 +136,7 @@ Vente de:
 
 - boxes sur étagère
 - plugins
-- service de sauvegarde, de SMS, de noms de domaine
+- service de sauvegarde, de SMS, de noms de domaine, gateway alexa/Google
 
 ???
 
@@ -169,15 +189,6 @@ Probablement plus au hardware
 ???
 Quoi qu'il en soit ce sera du Wi-Fi
 
----
-
-## Des solutions éxistent sur le marché
-
-<img src="./resources/chickenguard.jpg" height="80%" alt="la solution sur étagère">
-
-???
-Ici chickenguard
-Mais cher(140€), pas domotisé, pas adapté à ma cabane.
 
 
 ---
@@ -200,10 +211,11 @@ trop bas niveau pour moi, trop lourd à mettre à jour.
 
 ## Le coeur du système - 2 - Raspberry pi zero WH
 
+.center[
 <img src="./resources/raspberry_family.jpg" width="50%" alt="La famille Raspberry">
 
 Photo de famille : 0 / 1 / 2 / 3 / 4
-
+]
 ???
 
 utilisation raspberry pi 3 depuis qques années
@@ -448,7 +460,7 @@ Mais mauvaise expériences par le passé avec :
 <https://github.com/ccrisan/motioneyeos>
 
 <img src="./resources/motioneyeos.ico" width="100" alt="clé usb zwave">
-<img src="./resources/motioneye_mobile.png" width="300" alt="clé usb zwave">
+<img src="./resources/motioneye_mobile.png" width="250" alt="clé usb zwave">
 
 
 ???
@@ -461,7 +473,7 @@ Mais mauvaise expériences par le passé avec :
 
 Utilisation de l'API Google Vision : <https://cloud.google.com/vision/>
 
-<img src="./resources/poules_API_vision_result.png" width="300" alt="result_call_api">
+<img src="./resources/poules_API_vision_result.png" width="500" alt="result_call_api">
 
 cf [returned Json](./resources/api_vision_result.json)
 
@@ -473,6 +485,8 @@ Voir :
 name: back-cover
 
 # thank you
+
+.right[<img src="./resources/chicken_cat.jpg" width="300" alt="chicken_cat">]
 
 .logo[![logo](resources/logo.svg)]
 
