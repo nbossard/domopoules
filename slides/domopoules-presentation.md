@@ -390,7 +390,7 @@ L298 : 6mAh (si VEN = LOW), 24mAh sinon.
 
 ## Le problème de l'alimentation - solution solaire
 
-<img src="../hardware/IMG_20200724_181459.jpg" width="60%" alt="solution solaire">
+<img src="../hardware/IMG_20200724_181459.jpg" height="500" alt="solution solaire">
 
 ???
 
@@ -486,7 +486,9 @@ name: back-cover
 
 # thank you
 
-.right[<img src="./resources/chicken_cat.jpg" width="300" alt="chicken_cat">]
+
+.left[<https://github.com/nbossard/domopoules>]
+.right[<img src="./resources/chicken_cat.jpg" width="350" alt="chicken_cat">]
 
 .logo[![logo](resources/logo.svg)]
 
