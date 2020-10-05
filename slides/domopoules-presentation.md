@@ -28,7 +28,7 @@ Mots clés: raspberry pi zero W, raspbian, python, jeedom, zigbee, z-wave, motio
 
 ## Usage
 
-Présentation pour le .purple[Dev and Test Day 2020]
+Présentation par Nicolas BOSSARD pour le .purple[Dev and Test Day 2020]
 
 Réalisé avec Remark.js et le thème orange <https://gitlab.forge.orange-labs.fr/web/remark-orange-boilerplate>
 
@@ -295,7 +295,7 @@ pause()
 
 ## La solution technique
 
-<img src="../hardware/IMG_20200723_000108_recadre.jpg" width="700" alt="vue montage">
+<img src="./resources/montage_eclate.jpg" width="700" alt="vue montage eclate">
 
 ????
 
@@ -310,6 +310,24 @@ pause()
 Réagir à un ordre de faible puissance envoyé par le raspberry pi en envoyant du courant de plus forte puissance.
 
 Coût 5€
+
+---
+
+## La solution technique - 3
+
+<img src="./resources/montage_platine.jpg" width="700" alt="vue montage">
+
+????
+
+
+---
+
+## La solution technique - 4
+
+<img src="../hardware/IMG_20200723_000108_recadre.jpg" width="700" alt="vue montage">
+
+????
+
 
 ---
 
@@ -388,9 +406,18 @@ L298 : 6mAh (si VEN = LOW), 24mAh sinon.
 
 ---
 
-## Le problème de l'alimentation - solution solaire
+## Le problème de l'alimentation - optimisation et solaire
 
-<img src="../hardware/IMG_20200724_181459.jpg" height="500" alt="solution solaire">
+.col-left[
+Optimisations :
+
+- suppression du serveur apache
+- désactivation du HDMI
+- désactivation du deuxième moteur
+- plages horaires du controleur de charge
+
+]
+.col-right[ <img src="../hardware/IMG_20200724_181459.jpg" height="300" alt="solution solaire"> ]
 
 ???
 
@@ -406,6 +433,8 @@ cout
 
 ## Coût final
 
+.center[
+
 | Article                   | tarif |
 |---------------------------|-------|
 | pont en H                 | 5€    |
@@ -416,6 +445,8 @@ cout
 | panneau solaire 12 v 10 w | 22€   |
 | batterie 12V 7Ah          | 19€   |
 | TOTAL                     | 102   |
+
+]
 
 ---
 
@@ -450,6 +481,14 @@ Mais mauvaise expériences par le passé avec :
 ## Pour aller plus loin - 3 - raspberry zero WH
 
 <img src="./resources/Pi-Zero-W-official-case.jpg" width="600" alt="clé usb zwave">
+
+???
+
+---
+
+## Pour aller plus loin - 4 - raspberry zero WH
+
+<img src="./resources/camera mounted.jpg" width="600" alt="clé usb zwave">
 
 ???
 
