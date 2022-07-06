@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding=UTF-8
 
 from gpiozero import Motor
@@ -18,7 +18,7 @@ def init():
 
 def print_and_log(message): 
     logging.info(message)
-    print message
+    print(message)
 
 def info_button_pressed():
     print_and_log("Door button pressed")
