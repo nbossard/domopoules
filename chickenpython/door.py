@@ -6,6 +6,7 @@ from gpiozero import Button
 import datetime
 import time
 import logging
+import re
 
 TIME_CLOSE = 99
 TIME_OPEN = 69
@@ -28,7 +29,10 @@ button.when_pressed = info_button_pressed
 def read_status():
     file = open(STATUSFILENAME, "r")
     status = file.readline()
+    # remove potential noise such as newline
+    status = re.sub(r"[\n\t\s]*", "", status)
     file.close()
+    print_and_log("Current status is: -->" + status + "<--")
     return(status)
 
 
