@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # coding=UTF-8
 
+# refer to doc here : https://gpiozero.readthedocs.io/en/stable/recipes.html#button
+
 from gpiozero import Button
 
 
