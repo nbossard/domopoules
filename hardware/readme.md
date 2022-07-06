@@ -13,3 +13,9 @@
 | batterie 12V 7Ah          | 19€   | <https://www.amazon.fr/gp/product/B009D0KFOO>                                                               |
 | TOTAL                     | 102   |                                                                                                             |
 >  tmf: $7,2=Sum(3:6)
+
+## Pin connection
+
+Le détecteur de fermeture de porte doit être connecté au GPIO2 (pin3) et au ground (pin6).
+
+Le moteur doit être connecté aux pins GPIO17 (pin11) et GPIO22 (pin15).
