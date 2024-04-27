@@ -30,6 +30,8 @@ Mots clés: raspberry pi zero W, raspbian, python, jeedom, zigbee, z-wave, motio
 
 Présentation par Nicolas BOSSARD pour le .purple[Dev and Test Day 2020]
 
+Durée : 20 minutes
+
 Réalisé avec Remark.js et le thème orange <https://gitlab.forge.orange-labs.fr/web/remark-orange-boilerplate>
 
 Appuyez sur P pour voir les notes. Puis C pour cloner l'affichage.
